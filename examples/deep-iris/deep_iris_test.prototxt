@@ -1,0 +1,112 @@
+layer {
+  name: "data_pair"
+  type: "ImageData"
+  top: "data_pair"
+  top: "label_pair"
+  transform_param {
+    scale: 0.00392156862745
+  }
+  image_data_param {
+    source: "examples/deep-iris/train.txt"
+    batch_size: 100
+  }
+}
+layer {
+  name: "slice_pair"
+  type: "Slice"
+  bottom: "data_pair"
+  top: "slice_pair"
+}
+layer {
+  name: "conv1"
+  type: "Convolution"
+  bottom: "slice_pair"
+  top: "conv1"
+  convolution_param {
+    num_output: 2
+    weight_filler {
+      type: "xavier"
+    }
+    kernel_h: 11
+    kernel_w: 23
+  }
+}
+layer {
+  name: "pool1"
+  type: "Pooling"
+  bottom: "conv1"
+  top: "pool1"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "ip1"
+  type: "InnerProduct"
+  bottom: "pool1"
+  top: "ip1"
+  inner_product_param {
+    num_output: 500
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "sigmoid"
+  type: "Sigmoid"
+  bottom: "ip1"
+  top: "sigmoid"
+}
+layer {
+  name: "conv1_p"
+  type: "Convolution"
+  bottom: "slice_pair"
+  top: "conv1_p"
+  convolution_param {
+    num_output: 2
+    weight_filler {
+      type: "xavier"
+    }
+    kernel_h: 11
+    kernel_w: 23
+  }
+}
+layer {
+  name: "pool1_p"
+  type: "Pooling"
+  bottom: "conv1_p"
+  top: "pool1_p"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "ip1_p"
+  type: "InnerProduct"
+  bottom: "pool1_p"
+  top: "ip1_p"
+  inner_product_param {
+    num_output: 500
+    weight_filler {
+      type: "xavier"
+    }
+  }
+}
+layer {
+  name: "sigmoid_p"
+  type: "Sigmoid"
+  bottom: "ip1_p"
+  top: "sigmoid_p"
+}
+layer {
+  name: "loss"
+  type: "ConstrastiveLoss"
+  bottom: "sigmoid"
+  bottom: "sigmoid_p"
+  top: "loss"
+}

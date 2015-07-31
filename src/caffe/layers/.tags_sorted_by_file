@@ -1,0 +1,11 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+DataLayerSetUp	image_data_layer.cpp	/^void ImageDataLayer<Dtype>::DataLayerSetUp(const vector<Blob<Dtype>*>& bottom,$/;"	f	class:caffe::ImageDataLayer
+InternalThreadEntry	image_data_layer.cpp	/^void ImageDataLayer<Dtype>::InternalThreadEntry() {$/;"	f	class:caffe::ImageDataLayer
+ShuffleImages	image_data_layer.cpp	/^void ImageDataLayer<Dtype>::ShuffleImages() {$/;"	f	class:caffe::ImageDataLayer
+caffe	image_data_layer.cpp	/^namespace caffe {$/;"	n	file:
+~ImageDataLayer	image_data_layer.cpp	/^ImageDataLayer<Dtype>::~ImageDataLayer<Dtype>() {$/;"	f	class:caffe::ImageDataLayer

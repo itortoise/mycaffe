@@ -1,0 +1,27 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+CVMatToDatum	io.cpp	/^void CVMatToDatum(const cv::Mat& cv_img, Datum* datum) {$/;"	f	namespace:caffe
+DecodeDatum	io.cpp	/^bool DecodeDatum(Datum* datum, bool is_color) {$/;"	f	namespace:caffe
+DecodeDatumNative	io.cpp	/^bool DecodeDatumNative(Datum* datum) {$/;"	f	namespace:caffe
+DecodeDatumToCVMat	io.cpp	/^cv::Mat DecodeDatumToCVMat(const Datum& datum, bool is_color) {$/;"	f	namespace:caffe
+DecodeDatumToCVMatNative	io.cpp	/^cv::Mat DecodeDatumToCVMatNative(const Datum& datum) {$/;"	f	namespace:caffe
+ReadFileToDatum	io.cpp	/^bool ReadFileToDatum(const string& filename, const int label,$/;"	f	namespace:caffe
+ReadImageToCVMat	io.cpp	/^cv::Mat ReadImageToCVMat(const string& filename) {$/;"	f	namespace:caffe
+ReadImageToCVMat	io.cpp	/^cv::Mat ReadImageToCVMat(const string& filename,$/;"	f	namespace:caffe
+ReadImageToDatum	io.cpp	/^bool ReadImageToDatum(const string& filename, const int label,$/;"	f	namespace:caffe
+ReadProtoFromBinaryFile	io.cpp	/^bool ReadProtoFromBinaryFile(const char* filename, Message* proto) {$/;"	f	namespace:caffe
+ReadProtoFromTextFile	io.cpp	/^bool ReadProtoFromTextFile(const char* filename, Message* proto) {$/;"	f	namespace:caffe
+WriteProtoToBinaryFile	io.cpp	/^void WriteProtoToBinaryFile(const Message& proto, const char* filename) {$/;"	f	namespace:caffe
+WriteProtoToTextFile	io.cpp	/^void WriteProtoToTextFile(const Message& proto, const char* filename) {$/;"	f	namespace:caffe
+caffe	io.cpp	/^namespace caffe {$/;"	n	file:
+hdf5_load_nd_dataset	io.cpp	/^void hdf5_load_nd_dataset<double>(hid_t file_id, const char* dataset_name_,$/;"	f	namespace:caffe
+hdf5_load_nd_dataset	io.cpp	/^void hdf5_load_nd_dataset<float>(hid_t file_id, const char* dataset_name_,$/;"	f	namespace:caffe
+hdf5_load_nd_dataset_helper	io.cpp	/^void hdf5_load_nd_dataset_helper($/;"	f	namespace:caffe
+hdf5_save_nd_dataset	io.cpp	/^void hdf5_save_nd_dataset<double>($/;"	f	namespace:caffe
+hdf5_save_nd_dataset	io.cpp	/^void hdf5_save_nd_dataset<float>($/;"	f	namespace:caffe
+kProtoReadBytesLimit	io.cpp	/^const int kProtoReadBytesLimit = INT_MAX;  \/\/ Max size of 2 GB minus 1 byte.$/;"	v
+matchExt	io.cpp	/^static bool matchExt(const std::string & fn,$/;"	f	namespace:caffe
